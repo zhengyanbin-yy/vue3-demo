@@ -8,5 +8,5 @@ const v2 = ref('a')
 <template>
   <div>{{v1}}</div>
   <div>{{v2}}</div>
-  <demo-component v-model="v1" v-model:bin.test="v2"></demo-component>
+  <demo-component v-model.trim="v1" v-model:test.capitalize="v2"></demo-component>
 </template>

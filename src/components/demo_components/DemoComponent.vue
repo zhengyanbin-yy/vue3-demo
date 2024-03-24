@@ -1,9 +1,9 @@
 <script setup>
 import {ref} from 'vue'
 const value1 = defineModel()
-const [value2,xsf1] = defineModel('bin',{
+const [value2,modifiers] = defineModel('test',{
   set(newVal){
-    if (xsf1.test){
+    if (modifiers.capitalize){
       return newVal.charAt(0).toUpperCase() + newVal.slice(1)
     }
     return newVal
