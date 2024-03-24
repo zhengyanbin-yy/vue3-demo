@@ -1,0 +1,21 @@
+<script setup>
+import {ref} from 'vue'
+const value1 = defineModel()
+const [value2,xsf1] = defineModel('bin',{
+  set(newVal){
+    if (xsf1.test){
+      return newVal.charAt(0).toUpperCase() + newVal.slice(1)
+    }
+    return newVal
+  },
+})
+</script>
+
+<template>
+<input v-model="value1"/><br>
+<input v-model="value2"/><br>
+</template>
+
+<style scoped>
+
+</style>
